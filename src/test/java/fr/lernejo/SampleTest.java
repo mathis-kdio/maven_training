@@ -26,6 +26,13 @@ class SampleTest {
     }
 
     @Test
+    void fact_by_0_should_produce_1() {
+        int n = 0;
+        Assertions.assertThat(Sample.fact(n)).as("fact of 0")
+            .isEqualTo(1);
+    }
+
+    @Test
     void fact_by_5_should_produce_120() {
         int n = 5;
         Assertions.assertThat(Sample.fact(n)).as("fact of 5")
